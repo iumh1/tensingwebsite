@@ -7,6 +7,18 @@ body {
   display:none;
 }
 
+.responsiveCal {
+
+position: relative; padding-bottom: 75%; height: 0; overflow: hidden;
+
+}
+
+.responsiveCal iframe {
+
+position: absolute; top:0; left: 0; width: 100%; height: 100%;
+
+}
+
 /*
 Social Buttons
 Next part is forked from http://www.kodingmadesimple.com/2014/11/create-stylish-bootstrap-3-social-media-icons.html
