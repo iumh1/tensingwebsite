@@ -7,8 +7,15 @@ $(window).on('hashchange', function() {
     $("#progressbar").show("fast");
     includeDiv.load('files/' + href);
     $("#progressbar").hide();
+    navcontrol();
 });
 /*part ended*/
 
+function navcontrol(){
+  if ($(window).width() <= 800){
+      $('#btnTrigger').click();
+  }
+}
+
 $("#include").load("files/home.html");
-$("#progressbar").hide("100");
+$("#progressbar").hide("fast");
