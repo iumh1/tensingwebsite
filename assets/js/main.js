@@ -1,15 +1,9 @@
-/*
-Script: https://teamtreehouse.com/community/loading-external-html-into-a-div-using-jquery
-*/
+var progressbar = $("#progressbar");
 var includeDiv = $("#include");
+
 $(window).on('hashchange', function() {
-    var href = location.hash.slice(1) +".html";
-    $("#progressbar").show("fast");
-    includeDiv.load('files/' + href);
-    $("#progressbar").hide();
-    navcontrol();
+    includeIntoDiv();
 });
-/*part ended*/
 
 function navcontrol(){
   if ($(window).width() <= 800){
@@ -17,5 +11,16 @@ function navcontrol(){
   }
 }
 
-$("#include").load("files/home.html");
-$("#progressbar").hide("fast");
+function includeIntoDiv(){
+  progressbar.show();
+  var href = location.hash.slice(1) +".html";
+  if (href==".html") {
+    includeDiv.load("files/home.html");
+  } else {
+    includeDiv.load('files/' + href);
+  }
+  progressbar.hide();
+  navcontrol();
+}
+
+includeIntoDiv();
