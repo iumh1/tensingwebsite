@@ -1,6 +1,17 @@
-#include {
+body {
   min-height: 2000px;
   padding-top: 70px;
+  background-image: url("../../../images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 75% 55%;
+  background-size: 200%;
+}
+
+@media only screen and (max-width: 1000px) {
+  body{
+    background-position: 75% top;
+  }
 }
 
 #btnTrigger{
