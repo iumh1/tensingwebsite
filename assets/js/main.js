@@ -12,7 +12,6 @@ function navcontrol(){
 }
 
 function includeIntoDiv(){
-  progressbar.show();
   var href = location.hash.slice(1) +".html";
   if (href==".html") {
     includeDiv.load('files/home.html');
